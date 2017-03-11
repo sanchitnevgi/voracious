@@ -1,9 +1,8 @@
-// TODO: Create dictionay of tough words
-const toughDictionary = { appalled: 'shocked', dissonance: 'lack of harmony', scrutinize: 'calculate' };
+import dictionary from '../words.json';
 
-const isToughWord = word => !!toughDictionary[word];
+const isToughWord = word => !!dictionary[word];
 
-const lookupWord = word => toughDictionary[word];
+const lookupWord = word => dictionary[word];
 
 const wordsFromPara = $paragraph => $paragraph.innerText.split(' ');
 

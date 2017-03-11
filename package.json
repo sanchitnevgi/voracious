@@ -20,6 +20,7 @@
     "babel-loader": "^6.4.0",
     "babel-preset-env": "^1.2.1",
     "copy-webpack-plugin": "^4.0.1",
+    "json-loader": "^0.5.4",
     "webpack": "^2.2.1"
   }
 }
