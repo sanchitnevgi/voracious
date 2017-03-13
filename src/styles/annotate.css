@@ -1,3 +1,7 @@
+.annotation {
+  color: #546E7A;
+}
+
 .annotation > rt {
   font-size: 0.6em;
   color: #616161;

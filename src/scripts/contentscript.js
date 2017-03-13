@@ -9,7 +9,7 @@ const isToughWord = word => !!dictionary[word.toLowerCase()];
 
 const lookupDefinition = word => dictionary[word.toLowerCase()];
 
-const wordsFromPara = paragraph => paragraph.trim().split(' ');
+const wordsFromPara = paragraph => paragraph.split(' ');
 
 const annotateToughWord = word => {
     if(isToughWord(word) && !displayedDefinitions[word]) {

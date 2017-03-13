@@ -16,9 +16,9 @@ Navigate to the build folder from the chrome://extensions
 
 - [ ] Move dictionary to background to avoid intensive re-initialisation.
 - [ ] Improve dictionary
-- [ ] Fix white-space issue when annotated.
+- [x] Fix white-space issue when annotated.
 - [x] Add styles to <ruby>, to override native styles
-- [x] Avoid using innerText; Improve traversal
+- [x] Avoid using innerText; Improve traversal.
 - [ ] Improve word detection algorithm.
 - [ ] Implement options page to select word difficulty.
 - [ ] Limit annotated text width; Display full text on mouse over.
