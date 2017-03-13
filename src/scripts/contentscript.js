@@ -2,6 +2,7 @@ import dictionary from '../words.json';
 
 // HTML tags that should not traversed
 const TAG_BLACKLIST = ['SRCIPT', 'RUBY'];
+const DEFINITION_MAX_CHARS = 40;
 
 const displayedDefinitions = {};
 
@@ -11,10 +12,20 @@ const lookupDefinition = word => dictionary[word.toLowerCase()];
 
 const wordsFromPara = paragraph => paragraph.split(' ');
 
+const overflowText = text => {
+  if(text.length > DEFINITION_MAX_CHARS)
+    return text.slice(0, DEFINITION_MAX_CHARS-2).concat('...');
+  return text;
+}
+
+const compose = f => g => x => f(g(x))
+
+const getDefinition = compose(overflowText)(lookupDefinition);
+
 const annotateToughWord = word => {
     if(isToughWord(word) && !displayedDefinitions[word]) {
       displayedDefinitions[word] = true;
-      return `<ruby class="annotation">${word}<rt>${lookupDefinition(word)}</rt></ruby>`;
+      return `<ruby class="annotation">${word}<rt>${getDefinition(word)}</rt></ruby>`;
     }
     return word;
 }
@@ -48,8 +59,7 @@ const init = () => {
 
     const $articles = document.querySelectorAll('article');
 
-    $articles.forEach(traverseAndAnnotate)
+    $articles.forEach(traverseAndAnnotate);
 }
 
-// Some websites refresh data to add markup (For eg, Medium adds highlights asynchronously)
-setTimeout(init, 4000);
+init();
