@@ -23,6 +23,9 @@
       "js": [
         "contentscript.js"
       ],
+      "css": [
+        "annotate.css"
+      ],
       "run_at": "document_end",
       "all_frames": false
     }
@@ -33,7 +36,8 @@
       "38": "icons/icon-38.png"
     },
     "default_title": "Reader"
-  }
+  },
+  "web_accessible_resources": [
+    "annotate.css"
+  ]
 }
-
-

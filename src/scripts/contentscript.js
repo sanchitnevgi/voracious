@@ -5,13 +5,13 @@ const TAG_BLACKLIST = ['SRCIPT', 'RUBY'];
 
 const isToughWord = word => !!dictionary[word.toLowerCase()];
 
-const lookupDefinition = word => dictionary[word];
+const lookupDefinition = word => dictionary[word.toLowerCase()];
 
 const wordsFromPara = paragraph => paragraph.trim().split(' ');
 
 const annotateToughWord = word => {
     if(isToughWord(word)) {
-        return `<ruby>${word}<rt>${lookupDefinition(word)}</rt></ruby>`;
+        return `<ruby class="annotation">${word}<rt>${lookupDefinition(word)}</rt></ruby>`;
     }
     return word;
 }

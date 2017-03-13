@@ -25,6 +25,7 @@ module.exports = {
       { from: 'src/icons', to: 'icons' },
       { from: 'src/_locales', to: '_locales' },
       { from: 'manifest.json' },
+      { from: 'src/styles/annotate.css' },
     ])
   ]
 }

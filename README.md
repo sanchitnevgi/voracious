@@ -22,3 +22,4 @@ Navigate to the build folder from the chrome://extensions
 - [ ] Improve word detection algorithm.
 - [ ] Implement options page to select word difficulty.
 - [ ] Limit annotated text width; Display full text on mouse over.
+- [ ] Procure a dictionary with difficulty level, (Dictionary.com)
