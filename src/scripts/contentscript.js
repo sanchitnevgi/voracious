@@ -1,14 +1,17 @@
 import dictionary from '../words.json';
 
-const isToughWord = word => !!dictionary[word];
+// HTML tags that should not traversed
+const TAG_BLACKLIST = ['SRCIPT', 'RUBY'];
 
-const lookupWord = word => dictionary[word];
+const isToughWord = word => !!dictionary[word.toLowerCase()];
 
-const wordsFromPara = paragraph => paragraph.split(' ');
+const lookupDefinition = word => dictionary[word];
+
+const wordsFromPara = paragraph => paragraph.trim().split(' ');
 
 const annotateToughWord = word => {
     if(isToughWord(word)) {
-        return `<ruby>${word}<rt>${lookupWord(word)}</rt></ruby>`;
+        return `<ruby>${word}<rt>${lookupDefinition(word)}</rt></ruby>`;
     }
     return word;
 }
@@ -17,12 +20,12 @@ const isValidTextNode = $node => {
   return $node.nodeType === $node.TEXT_NODE && $node.textContent.trim();
 }
 
-const traverse = $node => {
+const traverseAndAnnotate = $node => {
 
-  if(['SCRIPT', 'RUBY'].some(tag => tag === $node.tagName)) return;
+  if(TAG_BLACKLIST.some(tag => tag === $node.tagName)) return;
 
   if(isValidTextNode($node)) {
-    const words = wordsFromPara($node.textContent.trim());
+    const words = wordsFromPara($node.textContent);
     const annotatedPara = words.map(annotateToughWord).join(' ');
 
     const $paragraph = document.createElement('div');
@@ -34,12 +37,15 @@ const traverse = $node => {
   }
 
   if($node.hasChildNodes()) {
-    $node.childNodes.forEach(traverse);
+    $node.childNodes.forEach(traverseAndAnnotate);
   }
 }
 
 const init = () => {
-    traverse(document.body);
+
+    const $articles = document.querySelectorAll('article');
+
+    $articles.forEach(traverseAndAnnotate)
 }
 
 // Some websites refresh data to add markup (For eg, Medium adds highlights asynchronously)
