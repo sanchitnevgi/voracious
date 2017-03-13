@@ -3,6 +3,8 @@ import dictionary from '../words.json';
 // HTML tags that should not traversed
 const TAG_BLACKLIST = ['SRCIPT', 'RUBY'];
 
+const displayedDefinitions = {};
+
 const isToughWord = word => !!dictionary[word.toLowerCase()];
 
 const lookupDefinition = word => dictionary[word.toLowerCase()];
@@ -10,8 +12,9 @@ const lookupDefinition = word => dictionary[word.toLowerCase()];
 const wordsFromPara = paragraph => paragraph.trim().split(' ');
 
 const annotateToughWord = word => {
-    if(isToughWord(word)) {
-        return `<ruby class="annotation">${word}<rt>${lookupDefinition(word)}</rt></ruby>`;
+    if(isToughWord(word) && !displayedDefinitions[word]) {
+      displayedDefinitions[word] = true;
+      return `<ruby class="annotation">${word}<rt>${lookupDefinition(word)}</rt></ruby>`;
     }
     return word;
 }
