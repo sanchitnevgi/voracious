@@ -1,7 +1,7 @@
 import dictionary from '../words.json';
 
 // HTML tags that should not traversed
-const TAG_BLACKLIST = ['SRCIPT', 'RUBY'];
+const TAG_BLACKLIST = ['SRCIPT', 'RUBY', 'BUTTON', 'CANVAS', 'INPUT', 'TABLE'];
 const DEFINITION_MAX_CHARS = 40;
 
 const displayedDefinitions = {};
@@ -56,7 +56,6 @@ const traverseAndAnnotate = $node => {
 }
 
 const init = () => {
-
     const $articles = document.querySelectorAll('article');
 
     $articles.forEach(traverseAndAnnotate);

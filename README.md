@@ -21,7 +21,7 @@ Navigate to the build folder from the chrome://extensions
 - [x] Avoid using innerText; Improve traversal.
 - [ ] Improve word detection algorithm.
 - [ ] Implement options page to select word difficulty.
-- [ ] Limit annotated text width; Display full text on mouse over.
+- [x] Limit annotated text width; Display full text on mouse over.
 - [x] Procure a dictionary with difficulty level, (Dictionary.com).
 - [x] Run content-script on page idle instead of relying on time-out.
 - [x] Prevent subsequent definitions from showing.
