@@ -20,7 +20,7 @@ Navigate to the build folder from the chrome://extensions
 - [x] Add styles to <ruby>, to override native styles
 - [x] Avoid using innerText; Improve traversal.
 - [ ] Improve word detection algorithm.
-- [ ] Improve article detection.
+- [x] Improve article detection.
 - [ ] Implement options page to select word difficulty.
 - [x] Limit annotated text width; Display full text on mouse over.
 - [x] Procure a dictionary with difficulty level, (Dictionary.com).

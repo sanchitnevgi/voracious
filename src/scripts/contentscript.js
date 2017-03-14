@@ -2,8 +2,9 @@ import dictionary from '../dictionary.json';
 
 // HTML tags that should not traversed
 const TAG_BLACKLIST = ['SRCIPT', 'RUBY', 'BUTTON', 'CANVAS', 'INPUT', 'TABLE'];
-const DEFINITION_MAX_CHARS = 40;
+const DEFINITION_MAX_CHARS = 60;
 const DIFFICULTY_THRESHOLD = 30;
+const ARTICLE_SELECTOR = ['article', '.article', 'section', '.articles', '.article-text', '.story-content'].join(', ');
 
 const displayedDefinitions = {};
 
@@ -59,9 +60,8 @@ const traverseAndAnnotate = $node => {
 }
 
 const init = () => {
-    const $articles = document.querySelectorAll('article');
-
-    $articles.forEach(traverseAndAnnotate);
+    const $content = document.querySelectorAll(ARTICLE_SELECTOR);
+    $content.forEach(traverseAndAnnotate);
 }
 
 init();
