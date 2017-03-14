@@ -1,14 +1,17 @@
-import dictionary from '../words.json';
+import dictionary from '../dictionary.json';
 
 // HTML tags that should not traversed
 const TAG_BLACKLIST = ['SRCIPT', 'RUBY', 'BUTTON', 'CANVAS', 'INPUT', 'TABLE'];
 const DEFINITION_MAX_CHARS = 40;
+const DIFFICULTY_THRESHOLD = 30;
 
 const displayedDefinitions = {};
 
-const isToughWord = word => !!dictionary[word.toLowerCase()];
+const isToughWord = word => dictionary[word.toLowerCase()] && getWordDifficulty(word) >= DIFFICULTY_THRESHOLD;
 
-const lookupDefinition = word => dictionary[word.toLowerCase()];
+const lookupDefinition = word => dictionary[word.toLowerCase()].definition;
+
+const getWordDifficulty = word => dictionary[word.toLowerCase()].difficulty;
 
 const wordsFromPara = paragraph => paragraph.split(' ');
 
