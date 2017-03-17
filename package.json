@@ -1,11 +1,11 @@
 {
-  "name": "Reader",
-  "version": "0.1.0",
-  "description": "Extension for looking up tough words",
+  "name": "Voracious",
+  "version": "0.1.1",
+  "description": "Extension to lookup tough words",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/sanchitgn/reader"
+    "url": "https://github.com/sanchitgn/voracious"
   },
   "author": "Sanchit Nevgi <sanchit.nevgi@gmail.com>",
   "scripts": {
@@ -13,7 +13,7 @@
     "build": "webpack"
   },
   "bugs": {
-    "url": "https://github.com/sanchitgn/reader/issues"
+    "url": "https://github.com/sanchitgn/voracious/issues"
   },
   "devDependencies": {
     "babel-core": "^6.23.1",

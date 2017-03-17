@@ -1,6 +1,6 @@
 {
   "name": "__MSG_appName__",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "manifest_version": 2,
   "description": "__MSG_appDescription__",
   "icons": {
@@ -35,7 +35,7 @@
       "19": "icons/icon-19.png",
       "38": "icons/icon-38.png"
     },
-    "default_title": "Reader"
+    "default_title": "Voracious"
   },
   "web_accessible_resources": [
     "annotate.css"

@@ -1,7 +1,7 @@
-Reader
+Voracious
 ======
 
-Reader is a chrome extension that displays definitions of tough words. Inspired by [Kindle Word-Wise](https://www.amazon.com/gp/feature.html?ie=UTF8&docId=1002989731)
+Voracious is a chrome extension that displays definitions of tough words. Inspired by [Kindle Word-Wise](https://www.amazon.com/gp/feature.html?ie=UTF8&docId=1002989731)
 
 ## Installation:
 
