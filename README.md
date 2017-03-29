@@ -5,12 +5,11 @@ Voracious is a chrome extension that displays definitions of tough words. Inspir
 
 ## Installation:
 
-```
-$ yarn
-$ yarn build
-```
+Fetch all the dependencies by running `$ yarn`.
 
-Navigate to the build folder from the chrome://extensions
+`$ yarn build` will build the source
+
+Choose `Load unpacked extension` from the `chrome://extensions` and navigate to the build folder. Make sure you are in the developer mode.
 
 ## TODO:
 
@@ -26,3 +25,4 @@ Navigate to the build folder from the chrome://extensions
 - [x] Procure a dictionary with difficulty level, (Dictionary.com).
 - [x] Run content-script on page idle instead of relying on time-out.
 - [x] Prevent subsequent definitions from showing.
+- [ ] Add extension to Opera & Firefox.
