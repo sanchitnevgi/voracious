@@ -1,0 +1,92 @@
+.app {
+  width: 100vw;
+  height: 100vh;
+  font-size: 24px;
+  background: #f44336;
+  font-family: 'Lato', sans-serif;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  height: 48px;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #c62828;
+}
+
+.header i {
+  color: white;
+  margin-right: 20px;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  height: 100%;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px;
+  margin-bottom: 24px;
+}
+
+.heading {
+  color: #ffffff;
+  font-size: 2em;
+  font-weight: 300;
+  line-height: 2em;
+}
+
+.sub-heading {
+  color: #F5F5F5;
+  font-size: 0.75em;
+  max-width: 50%;
+  text-align: justify;
+}
+
+.btn {
+  background: none;
+  color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  padding: 8px 24px;
+}
+
+.btn:hover {
+  color: #EEEEEE;
+  border-color: #EEEEEE
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.install-btn {
+  font-size: 1.2em;
+  border-radius: 16px;
+}
+
+.footer {
+  color: #ffffff;
+  font-size: 0.8em;
+  align-self: center;
+  padding: 12px;
+}
+
+.footer .author {
+  color: #ffffff;
+  text-decoration: underline;
+}
