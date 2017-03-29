@@ -77,6 +77,7 @@
 .install-btn {
   font-size: 1.2em;
   border-radius: 16px;
+  text-decoration: none;
 }
 
 .footer {
