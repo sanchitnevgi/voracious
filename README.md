@@ -3,6 +3,8 @@ Voracious
 
 Voracious is a chrome extension that displays definitions of tough words. Inspired by [Kindle Word-Wise](https://www.amazon.com/gp/feature.html?ie=UTF8&docId=1002989731)
 
+[How I went about it](https://medium.com/@sanchitgn/porting-kindle-word-wise-to-the-browser-7e21e04d066c)
+
 ## Installation:
 
 Fetch all the dependencies by running `$ yarn`.
